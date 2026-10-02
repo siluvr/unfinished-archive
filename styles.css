@@ -1,0 +1,384 @@
+body {
+    margin: 0;
+    background: #f4f1ea;
+    color: #1a1a1a;
+    font-family: Arial, sans-serif;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    border-right: 1px solid #333;
+    background: #111;
+}
+
+.sidebar-header {
+    padding-bottom: 35px;
+    border-bottom: 1px solid #333;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 35px 0 0;
+}
+
+.sidebar li {
+    margin-bottom: 18px;
+}
+
+.sidebar a {
+    display: block;
+    position: relative;
+    font-family: monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    color: #777;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.sidebar a:hover {
+    color: #fff;
+    padding-left: 8px;
+}
+
+.sidebar p {
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #888;
+    margin: 0;
+}
+
+.sidebar h2 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    line-height: 0.95;
+    letter-spacing: -1px;
+    color: white;
+    margin: 15px 0 0;
+}
+
+.sidebar::after {
+    content: "2026    01—06";
+    position: absolute;
+    bottom: 35px;
+    left: 30px;
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #555;
+}
+
+/* MAIN */
+
+main {
+    margin-left: 300px;
+}
+
+main section {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 80px;
+}
+
+main section:not(#opening) {
+    border-top: 1px solid #d5d0c7;
+    position: relative;
+}
+
+main section h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 5vw, 72px);
+    font-weight: normal;
+    line-height: 1;
+    max-width: 800px;
+    margin: 30px 0 50px;
+}
+
+main section p {
+    max-width: 650px;
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 0 0 18px;
+}
+
+/* SECTION LABEL */
+
+.section-label {
+    display: block;
+    font-family: monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #a9a9a9;
+    margin-bottom: 40px;
+}
+
+/* OPENING */
+
+#opening {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.opening-content {
+    max-width: 1000px;
+}
+
+#opening h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(70px, 10vw, 150px);
+    font-weight: normal;
+    line-height: 0.85;
+    letter-spacing: -5px;
+    margin: 0;
+}
+
+#opening .opening-content > p:first-of-type {
+    font-family: monospace;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin: 35px 0 20px;
+}
+
+#opening #desc {
+    max-width: 320px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#opening > span:last-child {
+    position: absolute;
+    bottom: 40px;
+    left: 80px;
+    font-size: 24px;
+    color: #888;
+}
+
+/* ALTERNATING SECTIONS */
+
+#memories,
+#fragments,
+#the-door {
+    background: #eeeae2;
+}
+
+/* MEMORIES */
+
+.memory {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 30px;
+    max-width: 800px;
+    padding: 35px 0;
+    border-top: 1px solid #d5d0c7;
+}
+
+.memory-number {
+    font-family: monospace;
+    font-size: 12px;
+    color: #888;
+}
+
+.memory-content p {
+    margin: 0 0 18px;
+}
+
+.memory-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* PEOPLE */
+
+.person {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 30px;
+    max-width: 800px;
+    padding: 25px 0;
+    border-top: 1px solid #d5d0c7;
+}
+
+.person-number {
+    font-family: monospace;
+    font-size: 12px;
+    color: #888;
+}
+
+.person p {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 28px;
+}
+
+/* FRAGMENTS */
+
+#fragments q {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    max-width: 600px;
+    margin: 60px 0 15px;
+}
+
+#fragments em {
+    font-family: monospace;
+    font-size: 12px;
+    color: #888;
+}
+
+.fragment {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 30px;
+    max-width: 800px;
+    margin: 60px 0 30px;
+    padding: 30px 0;
+    border-top: 1px solid #d5d0c7;
+    border-bottom: 1px solid #d5d0c7;
+}
+
+.fragment-number {
+    font-family: monospace;
+    font-size: 12px;
+    color: #888;
+}
+
+.fragment-content q {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    line-height: 1.2;
+    margin: 0 0 15px;
+}
+
+.fragment-content em {
+    font-family: monospace;
+    font-size: 12px;
+    color: #888;
+}
+
+/* WHAT HAPPENED */
+
+.happened-content {
+    max-width: 600px;
+    margin-left: 120px;
+}
+
+.happened-content p {
+    margin-bottom: 22px;
+}
+
+.happened-content p:nth-child(6) {
+    margin-top: 45px;
+}
+
+.happened-content p:nth-child(7) {
+    margin-top: 45px;
+}
+
+/* THE DOOR */
+
+#the-door {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.door-content {
+    max-width: 600px;
+}
+
+.door-content p {
+    margin-bottom: 18px;
+}
+
+.door-content p:nth-last-child(1) {
+    margin-top: 50px;
+    font-family: Georgia, serif;
+    font-size: 32px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 25px 20px;
+        border-right: none;
+        border-bottom: 1px solid #333;
+    }
+
+    .sidebar-header {
+        padding-bottom: 20px;
+    }
+
+    .sidebar h2 {
+        font-size: 32px;
+    }
+
+    .sidebar ul {
+        margin-top: 25px;
+    }
+
+    .sidebar li {
+        margin-bottom: 12px;
+    }
+
+    .sidebar::after {
+        display: none;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    main section {
+        min-height: auto;
+        padding: 60px 25px;
+    }
+
+    #opening {
+        min-height: 80vh;
+    }
+
+    #opening h1 {
+        font-size: clamp(55px, 18vw, 100px);
+        letter-spacing: -3px;
+    }
+
+    #opening > span:last-child {
+        left: 25px;
+        bottom: 25px;
+    }
+
+    main section h2 {
+        font-size: clamp(38px, 11vw, 60px);
+    }
+
+    .memory,
+    .person,
+    .fragment {
+        grid-template-columns: 40px 1fr;
+        gap: 15px;
+    }
+
+    .happened-content {
+        margin-left: 0;
+    }
+}
